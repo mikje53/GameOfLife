@@ -5,17 +5,36 @@ using System.Collections;
 
 public class Cell {
 
-    [Test]
+/*     [Test]
     public void CellSimplePasses() {
         // Use the Assert class to test conditions.
-    }
+    } */
 
     // A UnityTest behaves like a coroutine in PlayMode
     // and allows you to yield null to skip a frame in EditMode
-    [UnityTest]
+    /* [UnityTest]
     public IEnumerator CellWithEnumeratorPasses() {
         // Use the Assert class to test conditions.
         // yield to skip a frame
         yield return null;
+    } */
+    [Test]
+    public void ACellWithFewerThanTwoNeighboursShouldDie() {
+        Assert.Fail();
+    }
+    
+    [Test]
+    public void ACellWithTwoOrThreeNeighboursShouldSurvive() {
+        Assert.Fail();
+    }
+
+    [Test]
+    public void ACellWithMoreThanThreeNeighboursShouldDie() {
+        Assert.Fail();
+    }
+
+    [Test]
+    public void ADeadCellWithExactlyThreeNeighboursShouldRevive() {
+        Assert.Fail();
     }
 }
